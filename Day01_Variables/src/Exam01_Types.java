@@ -51,5 +51,13 @@ public class Exam01_Types {
 		System.out.println(l1);
 		long l2 = 321321321321L; // int형의 범위를 넘어선 경우 L을 입력, long 변수성질 
 		System.out.println(l2);
+		
+		// 실수형 float -> 데이터의 끝에 f를 붙여줘 float 형임을 명시
+		float f1 = 3.14f;
+		System.out.println(f1);
+		
+		// double -> 실수의 대표타입 
+		double d1 = 3.14;
+		System.out.println(d1);
 	}
 }

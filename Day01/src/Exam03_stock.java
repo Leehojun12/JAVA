@@ -1,5 +1,7 @@
 public class Exam03_stock {
 	public static void main(String[]args) {
+		/* 주식 매매 프로그램 */
+
 		System.out.println("========= 주식마켓 ========");
 		System.out.println("1. 삼성전자 (1주: "+ 40000+")");
 		System.out.println("2. 테슬라 (1주: "+ 60000+")");

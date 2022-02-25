@@ -9,7 +9,7 @@ public class Exam01_Types {
 		b = 20; // 공간에 입력 값을 넣고 채워 넣는다.
 		System.out.println(b);
 		b = 30; // 덮어 씌우기 
-		System.out.println("두번째 b :" + b);
+		System.out.println((int)a);	System.out.println("두번째 b :" + b);
 		
 //		 변수명의 길이에 제한은 없지만 보통은 짧게... / 의미 있게 짓는다.
 //		 특수문자도 시작 X 
@@ -50,7 +50,7 @@ public class Exam01_Types {
 		long l1 = 321321321;
 		System.out.println(l1);
 		long l2 = 321321321321L; // int형의 범위를 넘어선 경우 L을 입력, long 변수성질 
-		System.out.println(l2);
+		System.out.println(l2);		
 		
 		// 실수형 float -> 데이터의 끝에 f를 붙여줘 float 형임을 명시
 		float f1 = 3.14f;
@@ -59,5 +59,9 @@ public class Exam01_Types {
 		// double -> 실수의 대표타입 
 		double d1 = 3.14;
 		System.out.println(d1);
+		
+		//String형 -> 참조 자료형
+		String str = "가나다";
+		System.out.println(str);
 	}
 }

@@ -24,7 +24,7 @@ public class Exam01_Types {
 		System.out.println(f);
 		
 		 //char(캐릭터) : 문자를 저장하는 자료형('' 싱글 쿼테이션을 이용) 
-		char c1 = 'a';
+		char c1 = 'a'; // 97
 		char c2 = 'b';
 		char c3 = '5';
 		System.out.println(c1);

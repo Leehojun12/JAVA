@@ -24,7 +24,7 @@ public class Exam01_Scanner {
 //		String job = sc.next();
 //		System.out.println(name + " "+ age +" "+ job);
 		
-		// nextLine() 을 사용 하면 String -> 형변환해서 사용 (Integer) --parsing 변환--
+		// nextLine() 을 사용 하면 String -> 형변환해서 사용 (Integer) --parsing 변환-- ((int 형식))
 //		int input = Integer.parseInt(sc.nextLine());
 //		System.out.println(input);
 		
@@ -32,9 +32,10 @@ public class Exam01_Scanner {
 //		System.out.println("true 혹은 false 를 입력 : ");
 //		boolean b = Boolean.parseBoolean(sc.nextLine());
 //		System.out.println(b);
+		
 		// nextLine()을 이용해 String -> char
-		System.out.println("성별을 입력 : ");
-		char c = sc.nextLine().charAt(0);
-		System.out.println(c);
+//		System.out.println("성별을 입력 : ");
+//		char c = sc.nextLine().charAt(0);
+//		System.out.println(c);
 	}
 }

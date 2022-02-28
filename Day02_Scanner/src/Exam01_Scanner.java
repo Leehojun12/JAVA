@@ -33,7 +33,7 @@ public class Exam01_Scanner {
 //		boolean b = Boolean.parseBoolean(sc.nextLine());
 //		System.out.println(b);
 		
-		// nextLine()을 이용해 String -> char
+		// nextLine()을 이용해 String -> char (한 글자)
 //		System.out.println("성별을 입력 : ");
 //		char c = sc.nextLine().charAt(0);
 //		System.out.println(c);

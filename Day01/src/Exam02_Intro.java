@@ -22,6 +22,6 @@ public class Exam02_Intro {
 		// + : 문자열 연결
 		// : 순서에 따라 문자와 숫자가 연결되어 문자로 합쳐질 수도, 숫자와 숫자가 더해져 덧셈이 될 수도 있음
 		//System.out.println("안녕하세요?"+ "\n저의 이름은 이호준입니다."+"영어 이름은 Leehojun입니다." + "\n 제 나이는 28입니다." + "\n오늘의 체온 측정 결과는 36.5도입니다.");
-		System.out.println('a'+5+10);
+		//System.out.println('a'+5+10);
 	}
 }

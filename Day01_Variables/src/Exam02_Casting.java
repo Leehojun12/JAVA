@@ -15,7 +15,7 @@ public class Exam02_Casting {
 //		System.out.println("s1 : "+ s1);
 //		int i1 = s1;
 //		System.out.println("i1 : "+ i1);
-//		long l1 = i1;System.out.println(a * b);
+//		long l1 = i1;
 //		System.out.println("l1 : "+ l1);
 		
 		long l2 = 123456789123456789L;

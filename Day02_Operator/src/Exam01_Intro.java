@@ -64,6 +64,6 @@ public class Exam01_Intro {
 //		System.out.println("a > b || a > c :" +(a > b || a > c)); // 하나가 true면 true
 		
 		// 삼항 연산자( 비교식? A : B)
-		System.out.println(a < b ? a : b);
+		//System.out.println(a < b ? a : b);
 	}
 }

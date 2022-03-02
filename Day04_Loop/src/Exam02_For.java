@@ -28,11 +28,26 @@ public class Exam02_For {
 //			if (i != 3)
 //				System.out.print(i);
 //		}
+//		for(int i = 1; i <= input; i++) {
+//			if(i == 3) {
+//				continue;
+//			}System.out.print(i);
+//		}
+		
+		// 사용자에게 입력값을 받을 것
+		// 1부터 입력값까지의 전체 합을 출력
+		// 입력 값 : 5
+		// 1 + 2 + 3 + 4 + 5
+		
+		// 지역변수 : 반복문/조건문 혹은 메서드(기능)의 {}안 범위에서만 사용할 수 있는 변수
+		// 같은 지역에서 선언된 변수는 얼마든지 같은 영역에서 가져다 사용하는 것 가능
+		int sum = 0;
 		for(int i = 1; i <= input; i++) {
-			if(i == 3) {
-				continue;
-			}System.out.print(i);
+			System.out.print(i + " ");
+			sum += i;
 		}
+		System.out.println(sum);
+		
 			
 	}
 }

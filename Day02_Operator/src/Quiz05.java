@@ -16,6 +16,8 @@ public class Quiz05 {
 		System.out.print("己喊<M/F> >> ");
 		String gender = sc.nextLine();
 		gender = gender.equals("M")? "巢切积" : "咯切积" ;
-		System.out.println(gender);
+		System.out.println("己利 >>");
+		double score = Double.parseDouble(sc.nextLine());
+		
 	}
 }

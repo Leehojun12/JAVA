@@ -42,10 +42,23 @@ public class Exam01_Intro {
 //			System.out.print(arr[i]);
 //		}
 		int[] temp2 = new int[5];
-		for(int i = 0; i < temp2.length; i++) {
-			temp2[i] = i+1;
-			System.out.print(temp2[i]);
+//		for(int i = 0; i < temp2.length; i++) {
+//			temp2[i] = i+1;
+//			System.out.print(temp2[i]);
+//		}
+//		System.out.println("\n"+ temp2.length);
+		
+		// int형 배열 100칸짜리를 만들어서 0~99 까지 담아보기 -> 가능하다면 출력까지.
+		int[] arr1 = new int[100];
+//		for(int i =0; i< arr1.length;i++) {
+//			arr1[i]= i;
+//			System.out.println("arr1[i] : " + arr1[i]);
+//		}
+		
+		// int형 배열 100칸짜리를 만들어서 99~0 까지 담아보기 -> 가능하다면 출력까지.
+		for(int i=99; i>=0;i--) {
+			arr1[i]= 99-i;
+			System.out.println("arr1["+i+"] : " + arr1[i]);
 		}
-		System.out.println("\n"+ temp2.length);
-	}
+	}		
 }

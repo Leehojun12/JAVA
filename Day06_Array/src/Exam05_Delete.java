@@ -39,6 +39,9 @@ public class Exam05_Delete {
 		}catch(Exception e) {
 			System.out.println("¿À·ù");
 		}
+		for(int i = 0; i < intArr.length;i++) {
+			System.out.print(i + " ");
+		}
 		
 		
 	}

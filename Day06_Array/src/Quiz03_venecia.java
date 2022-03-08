@@ -24,17 +24,13 @@ public class Quiz03_venecia {
 				while (a < word.length) {
 
 					for (String w : word) {
-						System.out.print(w + " ");
+						System.out.print(w + "\t");
 					}
 					System.out.print("\nÀÔ·Â >>");
 					input = sc.nextLine();
 					for (int i = 0; i < word.length; i++) {
-						if (input.equals(word[i])) {
-							word[i] = " ";
-							a++;
-						} else {
-							continue;
-						}
+						if (input.equals(word[i]))
+							word[i] = "clear";
 					}
 				}
 				long end = System.currentTimeMillis();

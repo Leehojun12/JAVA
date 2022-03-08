@@ -29,9 +29,9 @@ public class Exam01_Scanner {
 //		System.out.println(input);
 		
 		// nextLine()을 이용해 String -> boolean
-//		System.out.println("true 혹은 false 를 입력 : ");
-//		boolean b = Boolean.parseBoolean(sc.nextLine());
-//		System.out.println(b);
+		System.out.println("true 혹은 false 를 입력 : ");
+		boolean b = Boolean.parseBoolean(sc.nextLine());
+		System.out.println(b);
 		
 		// nextLine()을 이용해 String -> char (한 글자)
 //		System.out.println("성별을 입력 : ");

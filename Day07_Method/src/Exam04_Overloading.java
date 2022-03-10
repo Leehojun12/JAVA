@@ -33,9 +33,9 @@ public class Exam04_Overloading {
 	// 오버로딩이 성립이 안되는경우 X
 	// -> 반환타입이 달라지게 되면 아예 다른 메서드로 인식
 	// -> 하나의 클래스에는 중복된 이름의 다른 메서드가 존재해서는 안됨.
-	public static void plus(int a, int b) {
-		a + b;
-	}
+//	public static void plus(int a, int b) {
+//		a + b;
+//	}
 	
 	// 리턴자료형이 달라지고 + 매개변수의 형태도 달라지게 되면 다른 메서드로써 같은 이름을 사용하는게 가능
 	// 오버로딩 X

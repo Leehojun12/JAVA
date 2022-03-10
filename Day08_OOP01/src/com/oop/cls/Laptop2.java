@@ -7,6 +7,17 @@ public class Laptop2 {
 	private int price;
 	private double size;
 	
+	// 기본 생성자
+	// 4개의 멤버필드를 매개변수로 받는 생성자
+	public Laptop2() {}
+	public Laptop2(String brand, String color, int price, double size) {
+		
+		this.brand = brand;
+		this.color = color;
+		this.price = price;
+		this.size = size;
+	}
+	
 	public String getBrand() {
 		return this.brand;
 	}

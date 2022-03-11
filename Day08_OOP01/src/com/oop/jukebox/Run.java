@@ -34,7 +34,7 @@ public class Run {
 		Player playMP3 = new Player(fis);
 		
 		playMP3.play();
-		fis.close();
+		fis.close(); // data 다 썻으니까 닫는 코드
 		
 		}catch(Exception e) {
 			e.printStackTrace(); // Test하는 동안 에러가 발생했을 때 어디에 발생했는지 알려주는 코드

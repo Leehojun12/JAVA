@@ -6,8 +6,9 @@ public class Run {
 	public static void main(String[] args) {
 		// 아이스크림 재고 관리 프로그램
 		/*
-		 * 가게에 메뉴가 추가될때마다 따라오는 문제점
+		 * 가게에 메뉴가 추가될때마다 따라오는 문제점 
 		 * 메뉴가 추가될 때마다 생성자, getter/setter, 멤버필드 -> 똑같은 코드 반복
+		 * --> 상속을 통해 문제 해결
 		 * index, add, print 메서드가 연쇄적으로 증가 -> 코드 결합도 증가
 		 * 저장소(배열) 사이즈 문제
 		 */

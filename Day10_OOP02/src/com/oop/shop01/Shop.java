@@ -5,21 +5,24 @@ public class Shop { // 아이스크림 가게 재고 관리 프로그램
 	private String name;
 	private String openTime;
 	private String closeTime;
+	private Product[] product;
 	private IceCream[] iceCream;
 	private Beverage[] beverage;
 	private Bread[] bread;
-	int ice_index = 0;
-	int br_index = 0;
-	int be_index = 0;
+	private int index = 0;
 	
 	public Shop() {}
-	public Shop(String name, String openTime, String closeTime, IceCream[] iceCream, Bread[] bread, Beverage[] beverage) {
+	public Shop(String name, String openTime, String closeTime, Product[] product) {
 		this.name = name;
 		this.openTime = openTime;
 		this.closeTime = closeTime;
-		this.iceCream = iceCream;
-		this.bread = bread;
-		this.beverage = beverage;
+		this.product = product;
+	}
+	public Product[] getProduct() {
+		return product;
+	}
+	public void setProduct(Product[] product) {
+		this.product = product;
 	}
 	public Bread[] getBread() {
 		return bread;
@@ -51,46 +54,18 @@ public class Shop { // 아이스크림 가게 재고 관리 프로그램
 	public void setIceCream(IceCream[] iceCream) {
 		this.iceCream = iceCream;
 	}
-	public void addIceCream(IceCream iceCream) {
-		this.iceCream[ice_index++] = iceCream;
+	public void addProduct(Product product) {
+		this.product[index++] = product;
 	}
-	public String printIceCream() {
+	public String printProduct() {
 		String rs = "";
-		for(int i = 0; i < this.iceCream.length; i++) {
-			if(this.iceCream[i] != null) {
-				rs += this.iceCream[i].getProduct_no()
-						+ " : " + this.iceCream[i].getName()
-						+ " : " + this.iceCream[i].getPrice()
+		for(int i = 0; i < this.product.length; i++) {
+			if(this.product[i] != null) {
+				rs += this.product[i].getProduct_no()
+						+ " : " + this.product[i].getName()
+						+ " : " + this.product[i].getPrice()
 						+ "\n";
 			}
 		}return rs;
-	}
-	public void addBread(Bread bread) {
-		this.bread[br_index++] = bread;
-	}
-	public void printBread() {
-		String rs = "";
-		for(Bread br : bread) {
-			if (br != null) {
-				rs += br.getProduct_no() + " : " +
-						br.getName() + " : " +
-						br.getPrice() +
-						"\n";
-			}
-		}
-	}
-	public void addBeverage(Beverage beverage) {
-		this.beverage[be_index++] = beverage;
-	}
-	public void printBeverage() {
-		String rs = "";
-		for(Beverage be : beverage) {
-			if (be != null) {
-				rs += be.getProduct_no() + " : " +
-						be.getName() + " : " +
-						be.getPrice() +
-						"\n";
-			}
-		}
 	}
 }

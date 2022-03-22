@@ -8,8 +8,7 @@ public class Student {
 	private int age;
 	private String gender;
 
-	public Student() {
-	}
+	public Student() {}
 
 	public Student(int no, String name, int age, String gender) {
 		this.no = no;

@@ -49,8 +49,8 @@ public class StudentDTO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	public String printAll() {
+	@Override
+	public String toString() {
 		return this.no + " : " + this.name + " : " + this.age + " : " + this.gender;
 	}
 }

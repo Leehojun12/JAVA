@@ -11,7 +11,8 @@ import com.netflix.dao.NetflixDAO;
 
 public class Run {
 	static Scanner sc = new Scanner(System.in);
-	
+	static NetflixDAO dao = new NetflixDAO();
+	static ArrayList<MemberShip> ml = dao.selectAll();
 	public static int getNumberInput() {
 		while(true) {
 		try {
@@ -23,10 +24,14 @@ public class Run {
 			}
 		}
 	}
+	public static void print() {
+		for (int i = 0; i < ml.size(); i++) {
+			System.out.println(ml.get(i).toString());
+		}
+
+	}
 	public static void main(String[] args) {
 
-		NetflixDAO dao = new NetflixDAO();
-		ArrayList<MemberShip> ml = dao.selectAll();
 		int count = 0;
 		String id = null;
 		String nickname = null;
@@ -86,9 +91,7 @@ public class Run {
 
 			} else if (menu == 2) {
 				System.out.println("ID\t등급\t닉네임\t가입일\t포인트");
-				for (int i = 0; i < ml.size(); i++) {
-					System.out.println(ml.get(i).toString());
-				}
+				print();
 
 			} else if (menu == 3) {
 				System.out.println("1. Id로 검색");
@@ -104,9 +107,7 @@ public class Run {
 					dao.searchNickname(nickname);
 				}
 			} else if (menu == 4) {
-				for (int i = 0; i < ml.size(); i++) {
-					System.out.println(ml.get(i).toString());
-				}
+				print();
 				System.out.print("수정할 회원의 ID 입력 : ");
 				id = sc.nextLine();
 				System.out.print(" 수정할 닉네임 : ");
@@ -115,9 +116,7 @@ public class Run {
 				point = getNumberInput();
 				dao.modify(id, nickname, point);
 			} else if (menu == 5) {
-				for (int i = 0; i < ml.size(); i++) {
-					System.out.println(ml.get(i).toString());
-				}
+				print();
 				System.out.print("삭제할 회원의 ID 입력 : ");
 				id = sc.nextLine();
 				dao.delete(id);

@@ -6,19 +6,18 @@ public abstract class MemberShip {
 	private String signup_date;
 	private int point;
 
-	public String getId() {
-		return id;
-	}
-
 	public MemberShip() {
 	}
 
 	public MemberShip(String id, String nickname, String signup_date, int point) {
-		super();
 		this.id = id;
 		this.nickname = nickname;
 		this.signup_date = signup_date;
 		this.point = point;
+	}
+
+	public String getId() {
+		return id;
 	}
 
 	public void setId(String id) {
@@ -42,16 +41,17 @@ public abstract class MemberShip {
 	}
 
 	public int getPoint() {
-		return point;
+		return point = 1000;
 	}
 
 	public void setPoint(int point) {
 		this.point = point;
 	}
-	
+
 	@Override
 	public String toString() {
-		return id + "\t" +getMemberShip() + "\t" + nickname + "\t" + signup_date + "\t" + point;
+		return id + "\t" + getMemberShip() + "\t" + nickname + "\t" + signup_date + "\t" + point;
 	}
+
 	public abstract String getMemberShip();
 }

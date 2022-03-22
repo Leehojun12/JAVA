@@ -9,11 +9,12 @@ public class Exam02_FileRead01 {
 		// try(객체 자동반납을 해주고 싶은 생성문) -> try문이 끝나면 알아서 객체를 반납
 		try(FileInputStream fis = new FileInputStream("test.txt")){
 			
+			// 아스키코드
+			System.out.println((char)fis.read());
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 		
 		
 		// 파일 입력 -> Stream -> InputStream

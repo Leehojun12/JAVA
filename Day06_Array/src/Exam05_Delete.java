@@ -34,13 +34,13 @@ public class Exam05_Delete {
 		System.out.print("입력하시요. >> ");
 		try {
 		int input = sc.nextInt();
-		intArr[input] = 0;
-		System.out.println(intArr[input]);
+		intArr[input]=0;
+		//System.out.println(intArr[input]);
 		}catch(Exception e) {
 			System.out.println("오류");
 		}
 		for(int i = 0; i < intArr.length;i++) {
-			System.out.print(i + " ");
+			System.out.print(intArr[i] + " ");
 		}
 		
 		

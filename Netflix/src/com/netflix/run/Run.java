@@ -10,9 +10,21 @@ import com.netflix.dto.Standard;
 import com.netflix.dao.NetflixDAO;
 
 public class Run {
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int getNumberInput() {
+		while(true) {
+		try {
+			int menu = Integer.parseInt(sc.nextLine());
+			return menu;
+			}catch(Exception e) {
+				System.out.println("숫자가 아닌값을 입력할수 없습니다.");
+				e.printStackTrace();
+			}
+		}
+	}
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
 		NetflixDAO dao = new NetflixDAO();
 		ArrayList<MemberShip> ml = dao.selectAll();
 		int count = 0;
@@ -20,6 +32,7 @@ public class Run {
 		String nickname = null;
 		String signup_date = null;
 		int point = 0;
+		int menu = 0;
 
 		while (true) {
 			System.out.println("*** Netflix 회원 관리 시스템 ***");
@@ -30,7 +43,9 @@ public class Run {
 			System.out.println("5.회원 정보 삭제");
 			System.out.println("6.시스템 종료");
 			System.out.print(">> ");
-			int menu = Integer.parseInt(sc.nextLine());
+			
+			menu = getNumberInput();
+			
 			if (menu == 1) {
 				while (true) {
 					System.out.println("회원등급 선택");
@@ -38,7 +53,7 @@ public class Run {
 					System.out.println("2. Standard");
 					System.out.println("3. Premium");
 					System.out.print(">> ");
-					int input = Integer.parseInt(sc.nextLine());
+					int input = getNumberInput();
 
 					System.out.print("신규 회원 ID(7자 이내) : ");
 					id = sc.nextLine();
@@ -53,7 +68,7 @@ public class Run {
 					System.out.print("신규 회원 가입일(210505 형식) : ");
 					signup_date = sc.nextLine();
 					System.out.print("신규 회원 포인트 : ");
-					point = Integer.parseInt(sc.nextLine());
+					point = getNumberInput();
 					if (input == 1 || input == 2 || input == 3) {
 						if (input == 1) {
 							dao.insert(new Basic(id, nickname, signup_date, point));
@@ -78,7 +93,7 @@ public class Run {
 			} else if (menu == 3) {
 				System.out.println("1. Id로 검색");
 				System.out.println("2. 닉네임으로 검색");
-				int input = Integer.parseInt(sc.nextLine());
+				int input = getNumberInput();
 				if (input == 1) {
 					System.out.print("검색 할 ID 입력 :");
 					id = sc.nextLine();
@@ -97,7 +112,7 @@ public class Run {
 				System.out.print(" 수정할 닉네임 : ");
 				nickname = sc.nextLine();
 				System.out.print("수정할 포인트 : ");
-				point = Integer.parseInt(sc.nextLine());
+				point = getNumberInput();
 				dao.modify(id, nickname, point);
 			} else if (menu == 5) {
 				for (int i = 0; i < ml.size(); i++) {

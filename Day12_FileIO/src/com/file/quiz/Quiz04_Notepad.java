@@ -7,14 +7,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Quiz04_Notepad {
-	public static boolean ExistFile(String inputFile) {
-		ArrayList<String> list = new ArrayList<>();
-
-		for(int i=0;i<list.size();i++) {
-			return true;
-		}
-		return false;
-	}
+	 public static void modifyFile(String fileName, boolean keep, String content) {
+	        if (keep) { // 만약 true 값이 넘어오면 이어쓰기
+	            try (FileWriter fw = new FileWriter(fileName, true);) {
+	                fw.write(content + "\n");
+	                fw.flush();
+	            } catch (Exception e) {
+	                e.printStackTrace();
+	            }
+	        } else { // 만약 false 값이 넘어오면 덮어쓰기
+	            try (FileWriter fw = new FileWriter(fileName);) {
+	                fw.write(content + "\n");
+	                fw.flush();
+	            } catch (Exception e) {
+	                e.printStackTrace();
+	            }
+	        }
+	    }
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -37,10 +46,6 @@ public class Quiz04_Notepad {
 			System.out.println("저장할 파일의 이름을 입력하세요.");
 			System.out.print(">> ");
 			inputFile = sc.nextLine();
-			if(ExistFile(inputFile)) {
-				System.out.println("존재하는 파일명입니다");
-				break;
-			}
 			try(FileWriter fw = new FileWriter(inputFile)){
 				String str = memo;
 				fw.write(str);
@@ -87,21 +92,12 @@ public class Quiz04_Notepad {
 			System.out.println("수정할 내용을 입력하세요.");
 			System.out.print(">> ");
 			String memo =sc.nextLine();
-			if(num == 1) {
-				try(FileWriter fw = new FileWriter(inputFile);){
-					fw.write(memo);
-					fw.flush();
-				}catch(Exception e) {
-					e.printStackTrace();
-				}
-			}else if(num == 2) {
-				try(FileWriter fw = new FileWriter(inputFile,true);){
-					fw.write(memo);
-					fw.flush();
-				}catch(Exception e) {
-					e.printStackTrace();
-				}
-			}
+			  if (num == 1) {
+                  modifyFile(inputFile, false, memo);
+              } else if (num == 2) {
+                  modifyFile(inputFile, true, memo);
+              }
+
 			System.out.println("수정완료");
 			
 		}else if(menu == 4) {

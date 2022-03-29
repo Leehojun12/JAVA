@@ -65,7 +65,7 @@ public class Server {
 
 					fed: while (true) {
 						String menu1 = dis.readUTF();
-						System.out.println(rev_nick + "님이" + menu1 + "를 선택했습니다.");
+						System.out.println(rev_nick + "님이\t" + menu1 + "를 선택했습니다.");
 						if (menu1.equals("1")) {
 							String title = dis.readUTF();
 							String content = dis.readUTF();
@@ -74,9 +74,16 @@ public class Server {
 							String menu2 = dis.readUTF();
 							if (menu2.equals("1")) {
 								System.out.println("전체 피드 목록 Request");
-								
+								String info = feeddao.selectall();
+								dos.writeUTF(info);
+								dos.flush();
 							} else if (menu2.equals("2")) {
 								System.out.println("개별 피드 확인 Request");
+								int seq = dis.read();
+								String select_info = feeddao.select(seq);
+								dos.writeUTF(select_info);
+								dos.flush();
+								
 							}
 						} else if (menu1.equals("3")) {
 
